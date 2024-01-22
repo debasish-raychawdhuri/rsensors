@@ -19,7 +19,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         window.mvprintw(
             line,
             1,
-            format!("────────────────────────────────────────────",),
+            format!("__________________________________________",),
         );
         line += 1;
         window.mvprintw(
@@ -31,7 +31,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         window.mvprintw(
             line,
             2,
-            format!("{:15} {:>7} {:>7} {:>7}\n", "", "────", "───", "───"),
+            format!("{:15} {:>7} {:>7} {:>7}\n", "", "____", "___", "___"),
         );
         for (name, temperature) in temperatures {
             line += 1;
@@ -39,7 +39,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 line,
                 2,
                 format!(
-                    "{:15} {:>5.0}°C {:>5.0}°C {:>5.0}°C\n",
+                    "{:15} {:>5.0} C {:>5.0} C {:>5.0} C\n",
                     name, temperature.current, temperature.maximum, temperature.minimum
                 ),
             );
@@ -62,7 +62,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         window.mvprintw(
             line,
             1,
-            format!("────────────────────────────────────────────",),
+            format!("__________________________________________",),
         );
         line += 1;
         window.mvprintw(
@@ -74,7 +74,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         window.mvprintw(
             line,
             2,
-            format!("{:15} {:>7} {:>7} {:>7}\n", "", "────", "───", "───"),
+            format!("{:15} {:>7} {:>7} {:>7}\n", "", "____", "___", "___"),
         );
         for (name, temperature) in fan_speed {
             line += 1;
